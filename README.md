@@ -58,7 +58,7 @@ To run the app
 
 Therefore using Foreman since its already integrated into the app, just run:
 
-```foreman start``` this will deal with importing data and running the app. You can the view the app on `localhost:5100`
+```foreman start``` this will deal with importing data and running the app. You can the view the app on `localhost:3000`
 
 ## Running the tests
 
@@ -79,6 +79,11 @@ Not Captured
 ## Image Processing e.g. Docker
 
 Not Captured
+
+## Isolating configuration / 12 factor app
+
+Environment variables are not isolated for the basis of this test.
+Most importantly a modern `12-factor app` methodology can fully be considered if need be and requested.
 
 
 ## License

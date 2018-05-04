@@ -1,2 +1,1 @@
-rake: rake web_import:users
-server: rails s
+jobs: rake web_import:users && rails s -p 3000
