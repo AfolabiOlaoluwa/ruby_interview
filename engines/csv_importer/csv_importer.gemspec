@@ -18,5 +18,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.1.6'
 
+  # Other dependencies needed
+  s.add_dependency 'jquery'
+  s.add_dependency 'turbolinks'
+
   s.add_development_dependency 'sqlite3'
 end

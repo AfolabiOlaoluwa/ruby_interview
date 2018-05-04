@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email_address: MyString
-  telephone_number: 1
-  website: MyString
+  name: Olaoluwa Afolabi
+  email_address: contact@afolabiolaoluwa.com
+  telephone_number: 08033715682
+  website: http://wwww.mysite.afolabiolaoluwa.com
 
 two:
-  name: MyString
-  email_address: MyString
-  telephone_number: 1
-  website: MyString
+  name: Sunday Adefila
+  email_address: sundayadefila@gmail.com
+  telephone_number: 08030000000
+  website: http://wwww.sundayadefila.com
