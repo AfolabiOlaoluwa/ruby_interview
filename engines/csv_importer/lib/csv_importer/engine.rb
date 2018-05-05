@@ -1,3 +1,6 @@
+require 'jquery-rails'
+require 'rails-controller-testing'
+
 module CsvImporter
   class Engine < ::Rails::Engine
     isolate_namespace CsvImporter
@@ -11,4 +14,5 @@ module CsvImporter
       end
     end
   end
+
 end

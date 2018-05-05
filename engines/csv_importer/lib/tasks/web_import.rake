@@ -27,3 +27,4 @@ namespace :web_import do
     p "Imported #{counter} users, #{duplicate_counter} duplicate rows ain't added in total"
   end
 end
+

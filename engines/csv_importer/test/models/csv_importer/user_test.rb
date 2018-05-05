@@ -2,6 +2,8 @@ require 'test_helper'
 
 module CsvImporter
   class UserTest < ActiveSupport::TestCase
+    include Engine.routes.url_helpers
+
     def setup
       @user = User.new(
         name: 'Olaoluwa Afolabi',

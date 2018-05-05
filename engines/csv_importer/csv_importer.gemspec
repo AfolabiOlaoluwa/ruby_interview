@@ -18,8 +18,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.1.6'
 
-  # Other dependencies needed
+  # Other dependencies needed in alphabetical order
   s.add_dependency 'jquery'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'rails-controller-testing'
   s.add_dependency 'turbolinks'
 
   s.add_development_dependency 'sqlite3'

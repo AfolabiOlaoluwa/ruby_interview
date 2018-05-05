@@ -8,40 +8,55 @@ module CsvImporter
       @user = csv_importer_users(:one)
     end
 
-    test "should get index" do
+    test 'should get index' do
       get users_url
       assert_response :success
     end
 
-    test "should get new" do
+    test 'should get new' do
       get new_user_url
       assert_response :success
     end
 
-    test "should create user" do
+    test 'should create user' do
       assert_difference('User.count') do
-        post users_url, params: { user: { email_address: @user.email_address, name: @user.name, telephone_number: @user.telephone_number, website: @user.website } }
+        post users_url, params: {
+          user: {
+            name: 'Stone Cold',
+            email_address: 'me@stonecold.com',
+            telephone_number: '08044444444',
+            website: 'http://www.stonecold.com'
+          }
+        }
+        # puts assigns(:user).errors.inspect
       end
 
       assert_redirected_to user_url(User.last)
     end
 
-    test "should show user" do
+    test 'should show user' do
       get user_url(@user)
       assert_response :success
     end
 
-    test "should get edit" do
+    test 'should get edit' do
       get edit_user_url(@user)
       assert_response :success
     end
 
-    test "should update user" do
-      patch user_url(@user), params: { user: { email_address: @user.email_address, name: @user.name, telephone_number: @user.telephone_number, website: @user.website } }
+    test 'should update user' do
+      patch user_url(@user), params: {
+        user: {
+          name: @user.name,
+          email_address: @user.email_address,
+          telephone_number: @user.telephone_number,
+          website: @user.website
+        }
+      }
       assert_redirected_to user_url(@user)
     end
 
-    test "should destroy user" do
+    test 'should destroy user' do
       assert_difference('User.count', -1) do
         delete user_url(@user)
       end
