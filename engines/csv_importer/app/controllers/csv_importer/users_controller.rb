@@ -1,8 +1,8 @@
-require_dependency "csv_importer/application_controller"
+require_dependency 'csv_importer/application_controller'
 
 module CsvImporter
   class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :set_user, only: %i[show edit update destroy]
 
     # GET /users
     def index
@@ -10,8 +10,7 @@ module CsvImporter
     end
 
     # GET /users/1
-    def show
-    end
+    def show; end
 
     # GET /users/new
     def new
@@ -19,8 +18,7 @@ module CsvImporter
     end
 
     # GET /users/1/edit
-    def edit
-    end
+    def edit; end
 
     # POST /users
     def create
@@ -49,14 +47,15 @@ module CsvImporter
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_user
-        @user = User.find(params[:id])
-      end
 
-      # Only allow a trusted parameter "white list" through.
-      def user_params
-        params.require(:user).permit(:name, :email_address, :telephone_number, :website)
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def user_params
+      params.require(:user).permit(:name, :email_address, :telephone_number, :website)
+    end
   end
 end

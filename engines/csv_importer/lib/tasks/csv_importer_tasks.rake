@@ -1,9 +1,5 @@
 require 'csv_importer/engine'
 
-# namespace :csv_import do
-# end
-
-
 task users: :environment do
   desc 'Import users from csv'
 
