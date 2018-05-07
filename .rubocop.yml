@@ -7,4 +7,4 @@ Metrics/MethodLength:
 
 
 Metrics/AbcSize:
-  Max: 22
+  Max: 25

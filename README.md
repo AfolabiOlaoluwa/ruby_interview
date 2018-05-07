@@ -19,36 +19,61 @@ purposes.
 
 To clone the repo:
 
-```git clone https://github.com/AfolabiOlaoluwa/ruby_interview.git```
+```
+git clone https://github.com/AfolabiOlaoluwa/ruby_interview.git
+```
 
 Then cd into root of the application from your terminal e.g.
 
-```cd ruby_interview```
+```
+cd ruby_interview
+```
 
 To install the necessary dependencies, run:
 
-```bundle install```
+```
+bundle install
+```
 
 #### Installing
 
 Setup your database by running the following:
 
-```rake db:drop ```
+```
+rake db:drop 
+```
 
-```rake db:create```
+```
+rake db:create
+```
 
-```rake db:migrate```
+```
+rake db:migrate
+```
 
-#### Importing data into database
+#### Importing CSV data into database
+...I solved this in three (3) different solutions.
+1. Importing csv from a web link using rake task
+2. Importing csv from a local file in the root of the engine.
+3. By using class method for easy testing of rake task.
 
-To import data from a web link 
+To import data from a web link: 
 
-```rake web_import:users```
+```
+rake web_import:users
+```
 
-To import data from csv file bundled with csv_importer module inside the engine.
+To import data from csv file bundled with csv_importer module inside the engine:
 
-```rake import:users``` 
+```
+rake import:users
+``` 
 
+To import data from a web link by using class method for easy testing of rake task:
+
+```
+rake users
+```
 #### Running the application
 
 To run the app

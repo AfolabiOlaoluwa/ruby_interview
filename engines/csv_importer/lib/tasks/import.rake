@@ -1,4 +1,4 @@
-require 'csv'
+require 'csv_importer/engine'
 
 namespace :import do
   desc 'Import users from csv'

@@ -1,5 +1,4 @@
-require 'open-uri'
-require 'csv'
+require 'csv_importer/engine'
 
 namespace :web_import do
   desc 'Import users from csv'
