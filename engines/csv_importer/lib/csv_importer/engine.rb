@@ -2,6 +2,7 @@ require 'jquery-rails'
 require 'rails-controller-testing'
 require 'open-uri'
 require 'csv'
+require 'capybara'
 
 module CsvImporter
   class Engine < ::Rails::Engine

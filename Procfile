@@ -1,1 +1,1 @@
-jobs: rake web_import:users && rails s -p 3000
+jobs: rake users && rails s -p 3000

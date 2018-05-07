@@ -2,6 +2,7 @@ PATH
   remote: engines/csv_importer
   specs:
     csv_importer (0.1.0)
+      capybara (= 2.16.1)
       jquery
       jquery-rails
       rails (~> 5.1.6)

@@ -52,13 +52,16 @@ rake db:migrate
 ```
 
 #### Importing CSV data into database
-Note: This is just explanation on how the solution was crafted, however, for easy running of the application,
+Note: This is just an explanation on how the solution was crafted, however, for easy running of the application,
 you can proceed to the next title: "Running the application", which uses FOREMAN for easy running of the solution.
 
 ...I solved this in three (3) different solutions.
 1. Importing csv from a web link using rake task
 2. Importing csv from a local file in the root of the engine.
 3. By using class method for easy testing of rake task.
+
+..to run the rake tasks or to run import tasks, cd into the parent root (`ruby_interview`) of the application
+and proceed with any of the rake task commands below:
 
 To import data from a web link: 
 
@@ -81,8 +84,7 @@ rake users
 
 To run the app
 
-run ```rail s``` then view the imported data on the browser at ```localhost:3000```
-...however, to make it a little seamless, we can wrap `Importing Data` and `running the application` into FOREMAN.
+To make it a little seamless, we can wrap `Importing Data` and `running the application` into FOREMAN.
 
 Therefore using Foreman since its already integrated into the app, just run:
 
@@ -108,17 +110,18 @@ Running Test on integration, cd into `engines/csv_importer`, then run:
 rails test test/integration/navigation_test.rb
 ```
 
-Running Test on system, cd into `engines/csv_importer`, then run:
-
-```
-
-```
-
 Running Test on the rake task solution, cd in `engines/csv_importer`, then run:
 
 ```
+rails test test/csv_importer_test.rb
+```
+
+However if you want to run all the Tests, cd into `engines/csv_importer`, the run:
 
 ```
+rails tests
+```
+
 
 ## Deployment
 
