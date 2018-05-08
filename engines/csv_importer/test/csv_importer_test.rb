@@ -1,21 +1,19 @@
+require 'csv_importer/engine'
 require 'test_helper'
 require 'rake'
-require 'uri'
 
-class Test < ActiveSupport::TestCase
-  test 'truth' do
-    assert_kind_of Module, CsvImporter
-  end
+module CsvImporter
+  class Test < ActiveSupport::TestCase
+    include Engine.routes.url_helpers
 
-  test 'override_application' do
-    @rake = Rake::Application.new
-    Rake.application = @rake
-    Rake::Task.define_task(:environment)
-    assert_equal @rake, Rake.application
-  end
+    test 'truth' do
+      assert_kind_of Module, CsvImporter
+    end
 
-  test 'should import data' do
-    WebImport.new(url: 'http://assets.cahootify.com/recruitment/people.csv').call
-    assert :success
+    test 'should override_application and import data' do
+      a = WebImport.new(url: 'http://assets.cahootify.com/recruitment/people.csv')
+      a.string_to_users('Olaoluwa Afolabi')
+      assert_equal User.count, 2
+    end
   end
 end

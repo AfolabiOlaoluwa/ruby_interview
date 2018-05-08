@@ -80,6 +80,8 @@ To import data from a web link by using class method for easy testing of rake ta
 ```
 rake users
 ```
+
+
 #### Running the application
 
 To run the app
