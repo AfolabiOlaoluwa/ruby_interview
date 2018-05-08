@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 5.1.6'
 
   # Other dependencies needed in alphabetical order
+  s.add_dependency 'byebug'
   s.add_dependency 'capybara', '2.16.1'
   s.add_dependency 'jquery'
   s.add_dependency 'jquery-rails'

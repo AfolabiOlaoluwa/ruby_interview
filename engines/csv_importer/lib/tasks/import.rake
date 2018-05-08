@@ -24,14 +24,3 @@ namespace :import do
     p "Imported #{counter} users, #{unimported_counter} duplicate rows ain't added in total"
   end
 end
-
-
-
-
-
-
-
-
-# The ! bang on create method will validate and make import fail if there are duplicates.
-# So, we dont want that. We just want the duplicated trashed silently and not save but notify us.
-# user = CsvImporter::User.create! row.to_h
